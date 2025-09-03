@@ -1,0 +1,47 @@
+@import "../var";
+@import "../mixin";
+@import "../fonts";
+
+.otherFeatures {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  span {
+    font-weight: 600;
+    font-size: 15px;
+    color: $light-blue;
+  }
+  h3 {
+    font-weight: 700;
+    font-size: 45px;
+    color: $dark-text;
+  }
+  .featuresContent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    img {
+      border: 1px solid $dark-text;
+    }
+    .contentText {
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+      align-items: start;
+      gap: 14px;
+      h4 {
+        font-weight: 700;
+        font-size: 22px;
+        color: $dark-text;
+      }
+      p {
+        font-weight: 400;
+        font-size: 18px;
+        color: $gray-text;
+      }
+    }
+  }
+}

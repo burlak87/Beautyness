@@ -1,0 +1,317 @@
+@import "../var";
+@import "../mixin";
+@import "../fonts";
+
+.membershipCards {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  .titleBlock {
+    text-align: center;
+    margin-bottom: 48px;
+    p {
+      font-size: 14px;
+      letter-spacing: 2px;
+      color: #8ea6a9;
+      font-weight: 500;
+      margin-bottom: 8px;
+      text-transform: uppercase;
+    }
+    h2 {
+      font-family: 'Georgia', serif;
+      font-weight: 900;
+      font-size: 40px;
+      color: #111;
+    }
+  }
+  .membershipCardsList {
+    display: flex;
+    gap: 32px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+
+/* Карточки */
+.card {
+  position: relative;
+  flex: 1 1 45%;
+  background: #14292f; // темный фон карточки
+  color: white;
+  display: flex;
+  height: 400px;
+  .cardContent {
+    padding: 48px 40px 48px 48px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  h3 {
+    font-family: 'Georgia', serif;
+    font-weight: 900;
+    font-size: 24px;
+    margin-bottom: 24px;
+  }
+  .cardFeatures {
+    flex-grow: 1;
+    list-style: none;
+    padding: 0;
+    margin: 0 0 40px 0;
+    li {
+      display: flex;
+      align-items: center;
+      margin-bottom: 12px;
+      font-size: 16px;
+      font-weight: 400;
+      color: white;
+      .icon-check {
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        margin-right: 12px;
+        // Тут должна быть картинка чекбокса
+        background-color: rgba(255, 255, 255, 0.4);
+        border-radius: 50%;
+      }
+    }
+  }
+
+  .btnCard {
+    background-color: #819ea7; // замените на ваши цвета
+    padding: 12px 40px;
+    border: none;
+    color: white;
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 1.8px;
+    cursor: pointer;
+    text-transform: uppercase;
+    align-self: flex-start;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: #a4b7bb;
+    }
+  }
+
+  .cardPriceBlock {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 120px;
+    height: 140px;
+    background: #0a1a1d; // затемненный темный фон
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-top: 32px;
+    gap: 4px;
+    z-index: 2;
+    p {
+      font-family: 'Georgia', serif;
+      font-weight: 900;
+      font-size: 40px;
+      color: white;
+      text-align: center;
+      span {
+        font-weight: 400;
+        font-size: 14px;
+        display: block;
+        letter-spacing: 0.5px;
+        margin-top: -6px;
+      }
+    }
+  }
+
+  .cardVerticalText {
+    position: absolute;
+    right: 16px;
+    bottom: 48px;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    font-family: 'Arial', sans-serif;
+    font-weight: 700;
+    font-size: 22px;
+    color: rgba(200, 200, 200, 0.3);
+    letter-spacing: 4px;
+    user-select: none;
+    z-index: 1;
+
+    &.card--gold &__vertical-text {
+      color: rgba(200, 180, 120, 0.3);
+    }
+  }
+}
+
+/* Подцветка вертикального текста для Gold отдельно */
+.card--gold .card__vertical-text {
+  color: rgba(200, 180, 120, 0.3);
+}
+.card--platinum .card__vertical-text {
+  color: rgba(150, 150, 150, 0.3);
+}
+
+/* Адаптивность */
+/* 1920px - 1200px */
+@media (max-width: 1920px) and (min-width: 1200px) {
+  .membership-cards {
+    max-width: 1100px;
+  }
+}
+
+/* 1199px - 992px */
+@media (max-width: 1199px) and (min-width: 992px) {
+  .membership-cards {
+    max-width: 900px;
+  }
+
+  .membership-cards__list {
+    gap: 24px;
+  }
+
+  .card {
+    height: 360px;
+
+    &__content {
+      padding: 36px 32px 36px 36px;
+    }
+
+    &__title {
+      font-size: 22px;
+    }
+
+    &__price-block {
+      width: 100px;
+      height: 120px;
+      padding-top: 24px;
+    }
+
+    &__price {
+      font-size: 32px;
+
+      & span {
+        font-size: 12px;
+      }
+    }
+
+    &__vertical-text {
+      font-size: 18px;
+      right: 12px;
+      bottom: 36px;
+      letter-spacing: 3px;
+    }
+  }
+}
+
+/* 991px - 768px */
+@media (max-width: 991px) and (min-width: 768px) {
+  .membership-cards {
+    max-width: 720px;
+    padding: 0 16px;
+  }
+
+  .membership-cards__list {
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  .card {
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+
+    &__content {
+      padding: 36px 24px 24px 24px;
+      order: 2;
+    }
+
+    &__price-block {
+      position: relative;
+      width: 100%;
+      height: 80px;
+      background: #0a1a1d;
+      padding-top: 0;
+      order: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-bottom-left-radius: 8px;
+      border-bottom-right-radius: 8px;
+    }
+
+    &__price {
+      font-size: 28px;
+      color: white;
+
+      & span {
+        font-size: 14px;
+      }
+    }
+
+    &__vertical-text {
+      display: none;
+    }
+  }
+}
+
+/* 767px - 305px */
+@media (max-width: 767px) and (min-width: 305px) {
+  .membership-cards {
+    padding: 0 12px;
+  }
+
+  .membership-cards__header {
+    & .membership-cards__title {
+      font-size: 28px;
+    }
+  }
+
+  .card {
+    height: auto;
+    flex-direction: column;
+    width: 100%;
+
+    &__content {
+      padding: 24px 16px 24px 16px;
+    }
+
+    &__title {
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+
+    &__features li {
+      font-size: 14px;
+
+      .icon-check {
+        width: 16px;
+        height: 16px;
+        margin-right: 8px;
+      }
+    }
+
+    &__btn {
+      padding: 10px 32px;
+      font-size: 12px;
+    }
+
+    &__price-block {
+      height: 60px;
+      padding: 0;
+      order: 1;
+    }
+
+    &__price {
+      font-size: 24px;
+
+      & span {
+        font-size: 12px;
+      }
+    }
+
+    &__vertical-text {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,36 @@
+@import "../var";
+@import "../mixin";
+@import "../fonts";
+
+.aboutInfo {
+  width: 60vw;
+  height: 48vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 10px;
+  background-color: $dark-green;
+  margin: 5vh 0;
+  .aboutContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    gap: 20px;
+    span {
+      font-weight: 600;
+      font-size: 15px;
+      color: $white-text;
+    }
+    h4 {
+      font-weight: 700;
+      font-size: 45px;
+      color: $white-text;
+    }
+    p {
+      font-weight: 400;
+      font-size: 18px;
+      color: $white-text;
+    }
+  }
+}

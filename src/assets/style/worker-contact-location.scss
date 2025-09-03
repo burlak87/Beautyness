@@ -1,0 +1,94 @@
+@import "../var";
+@import "../mixin";
+@import "../fonts";
+
+.worker-contact-location {
+  width: 70vw;
+  height: max-content;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  gap: 40px;
+  .contact-information {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    gap: 20px;
+    span {
+      font-weight: 600;
+      font-size: 15px;
+      color: $light-blue;
+    }
+    h4 {
+      font-weight: 700;
+      font-size: 45px;
+      color: $dark-text;
+    }
+    p {
+      font-weight: 400;
+      font-size: 18px;
+      color: $gray-text;
+    }
+    .contact {
+      width: max-content;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 30px;
+      .icon-block {
+        width: 65px;
+        height: 65px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: $bd;
+        background-color: inherit;
+        i {
+          color: $light-blue;
+        }
+      }
+      .info {
+        h4 {
+          font-weight: 700;
+          font-size: 24px;
+          color: $dark-text;
+        }
+        p {
+          font-weight: 600;
+          font-size: 16px;
+          color: $dark-text;
+        }
+      }
+    }
+    .btn-active {
+      width: 250px;
+      height: 65px;
+      background-color: $light-blue;
+      color: $white-text;
+      border: $bd;
+    }
+    .icn-active {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 24px;
+      i {
+        color: $dark-text;
+      }
+    }
+    .none {
+      display: none;
+    }
+  }
+}
+.reverse {
+  flex-direction: row-reverse;
+}
+
+@media (max-width: 1200px) and (min-width: 992px) {}
+
+@media (max-width: 991px) and (min-width: 768px) {}
+
+@media (max-width: 767px) and (min-width: 305px) {}

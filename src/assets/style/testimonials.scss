@@ -1,0 +1,80 @@
+@import "../var";
+@import "../mixin";
+@import "../fonts";
+
+.testimonials {
+  width: 100vw;
+  height: 42vh;
+  background-color: $light-bg;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 22.6px;
+  span {
+    font-weight: 600;
+    font-size: 15px;
+    color: $light-blue;
+  }
+  h3 {
+    font-weight: 700;
+    font-size: 45px;
+    color: $dark-text;
+  }
+  .testimonialsContent {
+    width: 62vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    .review {
+      height: 20vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: start;
+      gap: 20px;
+      background-color: $white-text;
+      p {
+        font-weight: 400;
+        font-size: 19px;
+        color: $gray-text;
+        margin: 0 2vw;
+      }
+      .authorReview {
+        width: 86.5%;
+        height: 10vh;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        gap: 14px;
+        background-color: $dark-green;
+        padding: 0 2vw;
+        .reviewContent {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: start;
+          flex-grow: 1;
+          h5 {
+            font-weight: 700;
+            font-size: 20px;
+            color: $white-text;
+          }
+          p {
+            font-weight: 600;
+            font-size: 16px;
+            color: $white-text;
+            margin: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1200px) and (min-width: 992px) {}
+
+@media (max-width: 991px) and (min-width: 768px) {}
+
+@media (max-width: 767px) and (min-width: 305px) {}

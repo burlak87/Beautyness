@@ -1,0 +1,129 @@
+@import "../var";
+@import "../mixin";
+@import "../fonts";
+
+.latestStories {
+  width: 100vw;
+  height: max-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  .title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    span {
+      font-weight: 600;
+      font-size: 15px;
+      color: $light-blue;
+    }
+    h3 {
+      font-weight: 700;
+      font-size: 45px;
+      color: $dark-text;
+      text-align: center;
+    }
+  }
+
+  .articleActive {
+    width: 70vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    .articleBlock {
+      width: 18.6vw;
+      height: 48.6vh;
+      background-color: $light-bg;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: start;
+      gap: 6px;
+      span {
+        font-weight: 700;
+        font-size: 13px;
+        color: $light-blue;
+        padding: .2vw;
+      }
+      h3 {
+        font-weight: 700;
+        font-size: 22px;
+        color: $dark-text;
+        padding: .2vw;
+      }
+      p {
+        font-weight: 400;
+        font-size: 16px;
+        color: $gray-text;
+        padding: .2vw;
+      }
+    }
+  }
+
+  .expertActive {
+    width: 70vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    .expertBlock {
+      width: 20vw;
+      height: 60vh;
+      background-color: inherit;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      h3 {
+        font-weight: 700;
+        font-size: 22px;
+        color: $dark-text;
+      }
+      span {
+        font-weight: 700;
+        font-size: 13px;
+        color: $light-blue;
+      }
+      p {
+        font-weight: 400;
+        font-size: 16px;
+        color: $gray-text;
+        text-align: center;
+      }
+      .icons {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        i {
+          color: $dark-text;
+        }
+      }
+    }
+  }
+
+  .btn-active {
+    width: 250px;
+    height: 65px;
+    background-color: inherit;
+    border: $bd;
+  }
+
+  .none {
+    display: none;
+  }
+}
+
+@media (max-width: 1200px) and (min-width: 992px) {}
+
+@media (max-width: 991px) and (min-width: 768px) {}
+
+@media (max-width: 767px) and (min-width: 305px) {}

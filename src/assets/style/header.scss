@@ -1,0 +1,74 @@
+@import "../var";
+@import "../mixin";
+@import "../fonts";
+
+.header {
+  width: 90vw;
+  height: 125px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .right-header{
+    width: max-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    .logo {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+    }
+    .contactPhone {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+    }
+  }
+  .left-header {
+    width: max-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 26px;
+    .navigation {
+      width: max-content;
+      .nav-list {
+        width: max-content;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 28px;
+        a {
+          color: $gray-text;
+          text-decoration: none;
+        }
+      }
+    }
+    .icons {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 24px;
+    }
+    .header-btn {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 15px;
+      width: 10vw;
+      height: 50px;
+      background-color: $light-blue;
+      color: $white-text;
+      border: $bd;
+    }
+  }
+}
+
+@media (max-width: 1200px) and (min-width: 992px) {}
+
+@media (max-width: 991px) and (min-width: 768px) {}
+
+@media (max-width: 767px) and (min-width: 305px) {}

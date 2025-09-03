@@ -1,0 +1,47 @@
+@import "../var";
+@import "../mixin";
+@import "../fonts";
+
+.features {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .featuresContent {
+    width: 70vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    .featuresItem {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: start;
+      gap: 20px;
+      h3 {
+        font-weight: 700;
+        font-size: 26px;
+        color: $dark-text;
+      }
+      p {
+        font-weight: 400;
+        font-size: 18px;
+        color: $gray-text;
+      }
+      button {
+        width: 250px;
+        height: 65px;
+        background-color: inherit;
+        border: $bd;
+      }
+    }
+  }
+}
+
+@media (max-width: 1200px) and (min-width: 992px) {}
+
+@media (max-width: 991px) and (min-width: 768px) {}
+
+@media (max-width: 767px) and (min-width: 305px) {}

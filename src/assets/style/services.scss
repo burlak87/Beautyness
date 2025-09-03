@@ -1,0 +1,266 @@
+@import "../var";
+@import "../mixin";
+@import "../fonts";
+
+.our-services {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  font-family: 'Arial', sans-serif;
+  color: #181818;
+
+  .header {
+    text-align: center;
+    margin-bottom: 60px;
+
+    .small-title {
+      font-size: 14px;
+      color: #7b8a94; // серый цвет
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+
+    .main-title {
+      font-weight: 700;
+      font-size: 32px;
+      line-height: 1.2;
+      max-width: 600px;
+      margin: 0 auto;
+      color: #000;
+    }
+  }
+
+  .services-layout {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    .service-block {
+      display: flex;
+      width: 96%;
+      height: max-content;
+      box-sizing: border-box;
+      position: relative;
+
+      &.reverse {
+        flex-direction: row-reverse;
+
+        .services-list {
+          text-align: left;
+          padding-left: 40px;
+          padding-right: 0;
+        }
+      }
+
+      .image-container {
+        width: 50%;
+      }
+
+      .services-list {
+        width: 50%;
+        height: max-content;
+        padding-left: 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        ul {
+          margin: 0;
+          padding: 0;
+          list-style: none;
+
+          .service-item {
+            margin-bottom: 18px;
+
+            .service-name-price {
+              display: flex;
+              align-items: center;
+              font-size: 16px;
+
+              strong {
+                font-weight: 700;
+              }
+
+              .dots {
+                flex-grow: 1;
+                border-bottom: 1px dotted #ccc;
+                margin: 0 10px;
+                height: 1px;
+              }
+
+              .price {
+                font-weight: 400;
+                font-size: 14px;
+                color: #494949;
+                white-space: nowrap;
+              }
+            }
+
+            .service-desc {
+              margin-top: 3px;
+              font-size: 13px;
+              color: #7b8a94;
+            }
+
+            hr {
+              border: none;
+              border-bottom: 1px solid #ddd;
+              margin: 15px 0 0 0;
+            }
+          }
+        }
+      }
+
+      .btn-appointment {
+        margin-top: 30px;
+        border: 1px solid #27494d;
+        background: transparent;
+        padding: 10px 25px;
+        font-weight: 600;
+        font-size: 12px;
+        letter-spacing: 1px;
+        cursor: pointer;
+        align-self: flex-start;
+        color: #27494d;
+        transition: background-color 0.3s ease, color 0.3s ease;
+
+        &:hover {
+          background-color: #27494d;
+          color: #fff;
+        }
+      }
+    }
+  }
+}
+
+/* Адаптив */
+@media (max-width: 1920px) and (min-width: 1200px) {
+  .our-services {
+    max-width: 1100px;
+  }
+}
+
+@media (max-width: 1199px) and (min-width: 992px) {
+  .our-services {
+    padding: 30px 15px;
+
+    .services-layout {
+      .service-block {
+        width: 48%;
+
+        &.reverse {
+          flex-direction: row-reverse;
+
+          .services-list {
+            padding-left: 30px;
+          }
+        }
+
+        .services-list {
+          padding-left: 30px;
+
+          .btn-appointment {
+            padding: 8px 22px;
+            font-size: 11px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 991px) and (min-width: 768px) {
+  .our-services {
+    padding: 25px 10px;
+
+    .header {
+      .main-title {
+        font-size: 26px;
+      }
+      .small-title {
+        font-size: 13px;
+      }
+    }
+
+    .services-layout {
+      flex-direction: column;
+
+      .service-block {
+        width: 100%;
+        flex-direction: column !important;
+        margin-bottom: 50px;
+
+        .image-container, .services-list {
+          width: 100%;
+          padding: 0 !important;
+        }
+
+        .services-list {
+          margin-top: 20px;
+          text-align: center;
+
+          ul .service-item .service-name-price {
+            justify-content: center;
+
+            .dots {
+              margin: 0 5px;
+            }
+
+            .price {
+              white-space: normal;
+            }
+          }
+
+          .btn-appointment {
+            margin-top: 25px;
+            align-self: center;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) and (min-width: 305px) {
+  .our-services {
+    padding: 20px 12px;
+
+    .header {
+      .main-title {
+        font-size: 22px;
+        max-width: 100%;
+      }
+      .small-title {
+        font-size: 12px;
+      }
+    }
+
+    .services-layout {
+      .service-block {
+        margin-bottom: 40px;
+
+        .image-container img {
+          height: auto;
+          max-height: 200px;
+          object-fit: contain;
+        }
+
+        .services-list {
+          margin-top: 15px;
+
+          ul .service-item {
+            font-size: 14px;
+          }
+
+          .btn-appointment {
+            font-size: 11px;
+            padding: 8px 20px;
+          }
+        }
+      }
+    }
+  }
+}
