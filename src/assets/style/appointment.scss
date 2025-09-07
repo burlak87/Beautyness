@@ -2,17 +2,9 @@
 @import "../mixin";
 @import "../fonts";
 
-$color-bg: #e9f0f1;
-$color-white: #fff;
-$color-text-dark: #191919;
-$color-text-muted: #666;
-$color-primary: #7f9ca9;
-$color-primary-dark: #68828b;
-$border-color: #86939c;
-
 .appointment {
   width: 100vw;
-  background-color: $color-bg;
+  background-color: $light-bg;
   padding: 60px 20px;
   display: flex;
   flex-direction: column;
@@ -24,19 +16,19 @@ $border-color: #86939c;
     span {
       font-size: 12px;
       text-transform: uppercase;
-      color: $color-primary;
+      color: $light-blue;
       letter-spacing: 1.5px;
       margin-bottom: 8px;
     }
     h2 {
       font-size: 36px;
       font-weight: 800;
-      color: $color-text-dark;
+      color: $dark-text;
       margin-bottom: 12px;
     }
     p {
       font-size: 16px;
-      color: $color-text-muted;
+      color: $gray-text;
       max-width: 600px;
       margin-left: auto;
       margin-right: auto;
@@ -44,7 +36,7 @@ $border-color: #86939c;
     }
   }
   .appointmentForm {
-    background: $color-white;
+    background: $white-text;
     padding: 40px 50px;
     box-shadow: 0 8px 27px rgba(0, 0, 0, 0.09);
     max-width: 920px;
@@ -61,7 +53,7 @@ $border-color: #86939c;
       .inputField {
         position: relative;
         flex: 1;
-        border: 1px solid $border-color;
+        border: $bd;
         display: flex;
         align-items: center;
         padding: 0 15px;
@@ -69,11 +61,10 @@ $border-color: #86939c;
           width: 24px;
           height: 24px;
           margin-right: 12px;
-          color: $color-primary;
+          color: $light-blue;
           display: flex;
           align-items: center;
           justify-content: center;
-          // тут может быть реализация иконки или картинка
           font-size: 18px;
         }
         input,
@@ -81,7 +72,7 @@ $border-color: #86939c;
           border: none;
           outline: none;
           font-size: 14px;
-          color: $color-text-dark;
+          color: $dark-text;
           flex-grow: 1;
           background: transparent;
           padding: 14px 0;
@@ -97,8 +88,8 @@ $border-color: #86939c;
       }
       .btnSubmit {
         flex: 1;
-        background-color: $color-primary;
-        color: $color-white;
+        background-color: $light-blue;
+        color: $white-text;
         font-weight: 700;
         font-size: 14px;
         text-transform: uppercase;
@@ -112,7 +103,7 @@ $border-color: #86939c;
         transition: background-color 0.3s ease;
 
         &:hover {
-          background-color: $color-primary-dark;
+          background-color: $light-blue;
         }
       }
     }
@@ -122,7 +113,7 @@ $border-color: #86939c;
     .appointmentFooter {
       margin-top: 20px;
       font-size: 13px;
-      color: $color-primary;
+      color: $light-blue;
       max-width: 600px;
       text-align: center;
       strong {
@@ -133,141 +124,17 @@ $border-color: #86939c;
   }
 }
 
-// Адаптивность
-
-@media (max-width: 1920px) and (min-width: 1200px) {
-  .appointment {
-    padding: 50px 40px;
-
-    &__header {
-      & .appointment__title {
-        font-size: 32px;
-      }
-      & .appointment__description {
-        font-size: 15px;
-      }
-    }
-
-    &__form {
-      gap: 18px;
-      padding: 35px 40px;
-
-      .input-row {
-        gap: 25px;
-      }
-    }
-  }
-}
-
-@media (max-width: 1199px) and (min-width: 992px) {
-  .appointment {
-    padding: 45px 30px;
-
-    &__header {
-      & .appointment__title {
-        font-size: 28px;
-      }
-      & .appointment__description {
-        font-size: 14px;
-      }
-    }
-
-    &__form {
-      padding: 30px 30px;
-      gap: 16px;
-
-      .input-row {
-        gap: 20px;
-      }
-    }
-  }
-}
-
-@media (max-width: 991px) and (min-width: 768px) {
-  .appointment {
-    padding: 40px 25px;
-
-    &__header {
-      & .appointment__title {
-        font-size: 24px;
-      }
-      & .appointment__description {
-        font-size: 13px;
-      }
-    }
-
-    &__form {
-      padding: 25px 25px;
-      gap: 14px;
-
-      .input-row {
-        flex-direction: column;
-        gap: 15px;
-      }
-
-      .input-field {
-        width: 100%;
-      }
-
-      .input-row.last-row {
-        flex-direction: row;
-
-        .textarea-field {
-          flex: 2;
-        }
-        .btn-submit {
-          flex: 1;
-        }
-      }
-    }
-  }
-}
-
 @media (max-width: 767px) and (min-width: 305px) {
   .appointment {
-    padding: 30px 15px;
-
-    &__header {
-      & .appointment__subtitle {
-        font-size: 10px;
-      }
-      & .appointment__title {
-        font-size: 20px;
-      }
-      & .appointment__description {
-        font-size: 12px;
-      }
-    }
-
-    &__form {
-      padding: 20px 15px;
-      gap: 12px;
-
-      .input-row {
+    .appointmentForm {
+      .inputRow {
+        width: 100vw;
         flex-direction: column;
-        gap: 12px;
-      }
-
-      .input-field {
-        width: 100%;
-        padding: 0 12px;
-
-        input,
-        textarea {
-          padding: 10px 0;
-          font-size: 13px;
+        .inputField {
+          width: 100vw;
+          border: $bd;
         }
       }
-
-      .btn-submit {
-        padding: 14px 10px;
-        font-size: 13px;
-      }
-    }
-
-    &__footer {
-      font-size: 11px;
-      max-width: 90%;
     }
   }
 }

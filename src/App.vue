@@ -84,9 +84,4 @@ const myDataObject = {
 </template>
 
 <style scoped>
-@media (max-width: 1200px) and (min-width: 992px) {}
-
-@media (max-width: 991px) and (min-width: 768px) {}
-
-@media (max-width: 767px) and (min-width: 305px) {}
 </style>

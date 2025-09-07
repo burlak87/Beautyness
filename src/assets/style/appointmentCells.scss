@@ -2,23 +2,15 @@
 @import "../mixin";
 @import "../fonts";
 
-$color-bg: #e9f2f5;
-$color-white: #fff;
-$color-black: #232323;
-$color-gray-text: #6b6b6b;
-$color-teal: #5f828a;
-$color-border: #9cb2b8;
-
-// Основной контейнер с фоном
 .discount-section {
   width: 100vw;
-  background-color: $color-bg;
-  padding: 60px 20px;
+  background-color: $light-bg;
+  padding: 0;
   display: flex;
   justify-content: center;
 
   .container {
-    background-color: $color-white;
+    background-color: $white-text;
     width: 60vw;
     display: flex;
     box-shadow: 0 10px 20px rgba(35, 35, 35, 0.1);
@@ -34,7 +26,7 @@ $color-border: #9cb2b8;
 
       .discount-label {
         text-transform: uppercase;
-        color: $color-teal;
+        color: $gray-text;
         font-weight: 600;
         font-size: 13px;
         letter-spacing: 1.8px;
@@ -42,7 +34,7 @@ $color-border: #9cb2b8;
       }
 
       .discount-title {
-        color: $color-black;
+        color: $dark-text;
         font-weight: 700;
         font-size: 32px;
         line-height: 1.15;
@@ -51,43 +43,41 @@ $color-border: #9cb2b8;
 
       .discount-desc {
         font-size: 14px;
-        color: $color-gray-text;
+        color: $gray-text;
         line-height: 1.5;
         margin-bottom: 40px;
       }
 
       .contact-discount {
         display: flex;
-        border: 1px solid $color-border;
+        border: $bd;
         width: fit-content;
         border-radius: 3px;
         overflow: hidden;
         box-shadow: 0 3px 10px rgb(0 0 0 / 0.08);
 
         .contact-info {
-          background-color: $color-white;
+          background-color: $white-text;
           padding: 15px 20px;
           display: flex;
           flex-direction: column;
           justify-content: center;
           font-size: 13px;
-          color: $color-black;
+          color: $dark-text;
 
           p {
             margin: 0 0 10px 0;
             display: flex;
             align-items: center;
-
             strong {
               margin-left: 6px;
               margin-right: 4px;
             }
-
             .dots {
               display: inline-block;
               width: 6px;
               height: 6px;
-              background-color: $color-teal;
+              background-color: $gray-text;
               border-radius: 50%;
               margin-right: 8px;
               position: relative;
@@ -97,7 +87,7 @@ $color-border: #9cb2b8;
                 content: '';
                 width: 6px;
                 height: 6px;
-                background-color: $color-teal;
+                background-color: $gray-text;
                 border-radius: 50%;
                 position: absolute;
                 top: 0;
@@ -113,8 +103,8 @@ $color-border: #9cb2b8;
         }
 
         .flat-offer {
-          background-color: $color-black;
-          color: $color-white;
+          background-color: $dark-text;
+          color: $white-text;
           padding: 20px 25px;
           text-align: center;
           display: flex;
@@ -148,7 +138,7 @@ $color-border: #9cb2b8;
     }
 
     .content-right {
-      background-color: $color-white;
+      background-color: $white-text;
       width: 50%;
       padding: 40px 50px;
       box-sizing: border-box;
@@ -162,17 +152,16 @@ $color-border: #9cb2b8;
         label {
           display: flex;
           align-items: center;
-          border: 1px solid $color-border;
+          border: $bd;
           border-radius: 3px;
           padding: 10px 12px;
           font-size: 14px;
-          color: $color-black;
+          color: $dark-text;
           background-color: transparent;
           cursor: text;
 
           .icon {
             margin-right: 10px;
-            // Можно здесь заменить на svg или background-image
           }
 
           input,
@@ -181,7 +170,7 @@ $color-border: #9cb2b8;
             outline: none;
             width: 100%;
             font-size: 14px;
-            color: $color-black;
+            color: $dark-text;
             background-color: transparent;
             font-family: inherit;
           }
@@ -200,9 +189,9 @@ $color-border: #9cb2b8;
 
       .btn-submit {
         margin-top: 10px;
-        background-color: $color-teal;
+        background-color: $gray-text;
         border: none;
-        color: $color-white;
+        color: $white-text;
         font-weight: 600;
         text-transform: uppercase;
         letter-spacing: 2px;
@@ -212,33 +201,30 @@ $color-border: #9cb2b8;
         width: 100%;
 
         &:hover {
-          background-color: darken($color-teal, 10%);
+          background-color: darken($gray-text, 10%);
         }
       }
     }
   }
 }
 
-/* Адаптив */
-
-/* 1920px - 1200px */
-@media (max-width: 1920px) and (min-width: 1201px) {
-  .discount-section .container {
-    max-width: 900px;
-    padding: 0;
-  }
-}
-
-/* 1199px - 992px */
 @media (max-width: 1199px) and (min-width: 992px) {
   .discount-section .container {
     flex-direction: column;
-    max-width: 700px;
+    width: 80vw;
 
     .content-left,
     .content-right {
       width: 100%;
-      padding: 30px 40px;
+      padding: 0;
+      justify-content: center;
+      align-items: center;
+      .input-group {
+        width: 80%;
+        label {
+          width: 100%;
+        }
+      }
     }
 
     .content-left {
@@ -260,111 +246,78 @@ $color-border: #9cb2b8;
   }
 }
 
-/* 991px - 768px */
 @media (max-width: 991px) and (min-width: 768px) {
   .discount-section .container {
-    max-width: 600px;
-    padding: 0 20px;
-
-    .content-left {
-      padding: 25px 20px;
-
-      .discount-title {
-        font-size: 24px;
-      }
-
-      .discount-desc {
-        font-size: 13px;
-      }
-    }
-
-    .content-right {
-      padding: 25px 20px;
-
-      .input-group label {
-        font-size: 13px;
-
-        input,
-        textarea {
-          font-size: 13px;
-        }
-      }
-
-      .btn-submit {
-        font-size: 13px;
-        padding: 12px 0;
-      }
-    }
-  }
-}
-
-/* 767px - 305px */
-@media (max-width: 767px) and (min-width: 305px) {
-  .discount-section .container {
     flex-direction: column;
-    max-width: 100%;
-    margin: 0;
+    width: 90vw;
 
     .content-left,
     .content-right {
       width: 100%;
-      padding: 20px;
+      padding: 0;
+      justify-content: center;
+      align-items: center;
+      .input-group {
+        width: 80%;
+        label {
+          width: 100%;
+        }
+      }
     }
 
     .content-left {
+      order: 1;
       text-align: center;
 
       .discount-title {
-        font-size: 20px;
-        line-height: 1.2;
-      }
-
-      .discount-desc {
-        font-size: 12px;
+        font-size: 28px;
       }
 
       .contact-discount {
-        flex-direction: column;
-
-        .contact-info {
-          p {
-            font-size: 12px;
-          }
-        }
-
-        .flat-offer {
-          margin-top: 15px;
-          padding: 15px 0;
-          font-size: 16px;
-
-          .percent {
-            font-size: 32px;
-          }
-        }
+        justify-content: center;
       }
     }
 
     .content-right {
-      padding: 20px 15px;
+      order: 2;
+    }
+  }
+}
 
-      .input-group label {
-        font-size: 12px;
+@media (max-width: 767px) and (min-width: 305px) {
+  .discount-section .container {
+    flex-direction: column;
+    width: 100vw;
 
-        .icon {
-          width: 18px;
-          height: 18px;
-        }
-
-        input,
-        textarea {
-          font-size: 12px;
+    .content-left,
+    .content-right {
+      width: 100%;
+      padding: 0;
+      justify-content: center;
+      align-items: center;
+      .input-group {
+        width: 80%;
+        label {
+          width: 100%;
         }
       }
+    }
 
-      .btn-submit {
-        font-size: 12px;
-        padding: 10px 0;
+    .content-left {
+      order: 1;
+      text-align: center;
+
+      .discount-title {
+        font-size: 28px;
       }
+
+      .contact-discount {
+        justify-content: center;
+      }
+    }
+
+    .content-right {
+      order: 2;
     }
   }
 }

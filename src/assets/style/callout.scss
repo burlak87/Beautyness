@@ -13,99 +13,87 @@ $color-gray-text: #6b6b6b;
 $color-teal: #5f828a;
 $color-border: #9cb2b8;
 
-// Основной контейнер с фоном
 .discount-section {
   width: 100vw;
-  background-color: $color-bg;
+  background-color: $light-bg;
   padding: 60px 20px;
   display: flex;
   justify-content: center;
-
   .container {
     background-color: inherit;
-    width: 50%;
+    width: 70%;
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 6px;
     overflow: hidden;
-
     .content-left {
       padding: 40px 50px;
-      width: 50%;
+      width: 60%;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-
       .discount-label {
         text-transform: uppercase;
-        color: $color-teal;
+        color: $gray-text;
         font-weight: 600;
         font-size: 13px;
         letter-spacing: 1.8px;
         margin: 0 0 15px 0;
       }
-
       .discount-title {
-        color: $color-black;
+        color: $dark-text;
         font-weight: 700;
         font-size: 32px;
         line-height: 1.15;
         margin: 0 0 20px 0;
         text-align: center;
       }
-
       .discount-desc {
         font-size: 14px;
-        color: $color-gray-text;
+        color: $gray-text;
         line-height: 1.5;
         margin-bottom: 40px;
         text-align: center;
       }
-
       .contact-discount {
         display: flex;
-        border: 1px solid $color-border;
+        border: $bd;
         width: fit-content;
         border-radius: 3px;
         overflow: hidden;
         box-shadow: 0 3px 10px rgb(0 0 0 / 0.08);
-
         .contact-info {
-          background-color: $color-white;
-          padding: 15px 20px;
+          background-color: $white-text;
+          padding: 15px;
           display: flex;
           flex-direction: column;
           justify-content: center;
           font-size: 13px;
-          color: $color-black;
-
+          color: $dark-text;
           p {
             margin: 0 0 10px 0;
             display: flex;
             align-items: center;
-
             strong {
               margin-left: 6px;
               margin-right: 4px;
             }
-
             .dots {
               display: inline-block;
               width: 6px;
               height: 6px;
-              background-color: $color-teal;
+              background-color: $gray-text;
               border-radius: 50%;
               margin-right: 8px;
               position: relative;
-
               &::before,
               &::after {
                 content: '';
                 width: 6px;
                 height: 6px;
-                background-color: $color-teal;
+                background-color: $gray-text;
                 border-radius: 50%;
                 position: absolute;
                 top: 0;
@@ -119,23 +107,20 @@ $color-border: #9cb2b8;
             }
           }
         }
-
         .flat-offer {
-          background-color: $color-black;
-          color: $color-white;
+          background-color: $dark-text;
+          color: $white-text;
           padding: 20px 25px;
           text-align: center;
           display: flex;
           flex-direction: column;
           justify-content: center;
-
           .get-flat {
             font-size: 12px;
             font-weight: 600;
             letter-spacing: 2px;
             margin: 0 0 6px 0;
           }
-
           .percent {
             font-size: 42px;
             font-weight: 900;
@@ -144,7 +129,6 @@ $color-border: #9cb2b8;
               font-size: 30px;
             }
           }
-
           .discount-text {
             font-size: 14px;
             font-weight: 600;
@@ -157,77 +141,54 @@ $color-border: #9cb2b8;
   }
 }
 
-/* Адаптив */
-
-/* 1920px - 1200px */
-@media (max-width: 1920px) and (min-width: 1201px) {
-  .discount-section .container {
-    max-width: 900px;
-    padding: 0;
-  }
-}
-
-/* 1199px - 992px */
 @media (max-width: 1199px) and (min-width: 992px) {
   .discount-section .container {
     flex-direction: column;
     max-width: 700px;
-
     .content-left,
     .content-right {
       width: 100%;
       padding: 30px 40px;
     }
-
     .content-left {
       order: 1;
       text-align: center;
-
       .discount-title {
         font-size: 28px;
       }
-
       .contact-discount {
         justify-content: center;
       }
     }
-
     .content-right {
       order: 2;
     }
   }
 }
 
-/* 991px - 768px */
 @media (max-width: 991px) and (min-width: 768px) {
   .discount-section .container {
     max-width: 600px;
     padding: 0 20px;
-
     .content-left {
       padding: 25px 20px;
-
+      width: 80%;
       .discount-title {
         font-size: 24px;
       }
-
       .discount-desc {
         font-size: 13px;
       }
     }
-
     .content-right {
       padding: 25px 20px;
-
       .input-group label {
         font-size: 13px;
-
         input,
         textarea {
           font-size: 13px;
         }
       }
-
       .btn-submit {
         font-size: 13px;
         padding: 12px 0;
@@ -236,69 +197,55 @@ $color-border: #9cb2b8;
   }
 }
 
-/* 767px - 305px */
 @media (max-width: 767px) and (min-width: 305px) {
   .discount-section .container {
     flex-direction: column;
     max-width: 100%;
     margin: 0;
-
     .content-left,
     .content-right {
       width: 100%;
       padding: 20px;
     }
-
     .content-left {
       text-align: center;
-
       .discount-title {
         font-size: 20px;
         line-height: 1.2;
       }
-
       .discount-desc {
         font-size: 12px;
       }
-
       .contact-discount {
         flex-direction: column;
-
         .contact-info {
           p {
             font-size: 12px;
           }
         }
-
         .flat-offer {
           margin-top: 15px;
           padding: 15px 0;
           font-size: 16px;
-
           .percent {
             font-size: 32px;
           }
         }
       }
     }
-
     .content-right {
       padding: 20px 15px;
-
       .input-group label {
         font-size: 12px;
-
         .icon {
           width: 18px;
           height: 18px;
         }
-
         input,
         textarea {
           font-size: 12px;
         }
       }
-
       .btn-submit {
         font-size: 12px;
         padding: 10px 0;

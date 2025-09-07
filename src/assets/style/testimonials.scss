@@ -73,8 +73,52 @@
   }
 }
 
-@media (max-width: 1200px) and (min-width: 992px) {}
+@media (max-width: 1200px) and (min-width: 992px) {
+  .testimonials {
+    height: 64vh;
+    .testimonialsContent {
+      width: 80vw;
+      .review {
+        height: fit-content;
+      }
+    }
+  }
+}
 
-@media (max-width: 991px) and (min-width: 768px) {}
+@media (max-width: 991px) and (min-width: 768px) {
+  .testimonials {
+    height: 64vh;
+    .testimonialsContent {
+      width: 80vw;
+      flex-direction: column;
+      .review {
+        height: fit-content;
+        .authorReview {
+          width: 100%;
+          padding: 0;
+        }
+      }
+    }
+  }
+}
 
-@media (max-width: 767px) and (min-width: 305px) {}
+@media (max-width: 767px) and (min-width: 305px) {
+  .testimonials {
+    height: fit-content;
+    h3 {
+      text-align: center;
+    }
+    .testimonialsContent {
+      width: 80vw;
+      flex-direction: column;
+      .review {
+        height: fit-content;
+        .authorReview {
+          width: 100%;
+          padding: 0;
+          height: fit-content;
+        }
+      }
+    }
+  }
+}

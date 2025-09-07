@@ -2,69 +2,52 @@
 @import "../mixin";
 @import "../fonts";
 
-$color-bg-left: #e9f1f3; // цвет левого светлого фона
-$color-bg-right: #314349; // цвет правого темного фона
-$color-subtitle: #526f7b;
-$color-title: #000000;
-$color-desc: #6f6f6f;
-$color-btn-bg: #5f828b;
-$color-btn-text: #fff;
-
 .beauty-section {
   display: flex;
   justify-content: space-between;
-  background-color: $color-bg-left;
-  color: $color-title;
+  background-color: $light-bg;
+  color: $dark-text;
   min-height: 60vh;
   padding: 0 0 0 120px;
   position: relative;
-  font-family: 'Arial', sans-serif;
-
-  // Левая часть контента
   .content {
     flex: 1;
     max-width: 600px;
     display: flex;
     flex-direction: column;
-
     .subtitle {
-      color: $color-subtitle;
+      color: $light-blue;
       font-size: 14px;
       font-weight: 600;
       letter-spacing: 1.5px;
       margin: 15px 0;
       display: flex;
       align-items: center;
-
       &::before {
         content: '⚠';
         margin-right: 8px;
         font-size: 14px;
       }
     }
-
     .title {
-      font-family: 'Georgia', serif;
       font-weight: 900;
       font-size: 52px;
       line-height: 1.1;
       margin-bottom: 20px;
-      color: $color-title;
+      color: $dark-text;
     }
-
     .desc {
       font-size: 16px;
-      color: $color-desc;
+      color: $gray-text;
       line-height: 1.4;
       margin-bottom: 40px;
       max-width: 450px;
     }
-
     .btn-reservation {
       width: max-content;
       padding: 12px 36px;
-      background-color: $color-btn-bg;
-      color: $color-btn-text;
+      background-color: $light-bg;
+      color: $white-text;
       border: none;
       cursor: pointer;
       font-weight: 600;
@@ -72,58 +55,47 @@ $color-btn-text: #fff;
       letter-spacing: 1.2px;
       text-transform: uppercase;
       transition: background-color 0.3s;
-
       &:hover {
-        background-color: darken($color-btn-bg, 10%);
+        background-color: darken($light-bg, 10%);
       }
     }
   }
-
-  // Правая часть с картинкой
   .image-wrapper {
     flex: 1;
     position: relative;
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    background-color: $color-bg-right;
-
+    background-color: $dark-green;
     .img-frame {
       position: absolute;
       width: 380px;
       height: 380px;
-      border: 6px solid white;
+      border: 6px solid $white-text;
       top: 50%;
       right: 60px;
       transform: translateY(-50%);
       box-sizing: border-box;
       z-index: 1;
     }
-
     .image {
       position: relative;
       width: 380px;
       height: 380px;
-      background-color: #ccc; // Заглушка вместо картинки
+      background-color: $gray-text;
       top: 50%;
       right: 0;
       transform: translateY(-50%);
       z-index: 2;
       box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
-      // Тут должна быть картинка реализованная через background-image или img тег, который ты добавишь позже
     }
   }
 }
 
-
-// Адаптив
-
-// 1920px - 1200px
 @media (max-width: 1920px) and (min-width: 1201px) {
   .beauty-section {
     padding: 60px 80px;
     min-height: 500px;
-
     .content {
       .title {
         font-size: 44px;
@@ -132,14 +104,12 @@ $color-btn-text: #fff;
         font-size: 14px;
       }
     }
-
     .image-wrapper {
       .img-frame,
       .image {
         width: 320px;
         height: 320px;
       }
-
       .img-frame {
         right: 30px;
       }
@@ -147,18 +117,15 @@ $color-btn-text: #fff;
   }
 }
 
-// 1199px - 992px
 @media (max-width: 1199px) and (min-width: 992px) {
   .beauty-section {
     flex-direction: column;
     padding: 50px 40px;
     min-height: auto;
-
     .content {
       max-width: 100%;
       text-align: center;
       order: 1;
-
       .title {
         font-size: 36px;
       }
@@ -166,23 +133,20 @@ $color-btn-text: #fff;
         font-size: 14px;
         max-width: 100%;
       }
-
       .btn-reservation {
         margin: 0 auto;
       }
     }
-
     .image-wrapper {
       order: 2;
       width: 100%;
       height: auto;
-      background-color: $color-bg-right;
+      background-color: $dark-green;
       margin-top: 40px;
       display: flex;
       justify-content: center;
       align-items: center;
       position: relative;
-
       .img-frame,
       .image {
         width: 280px;
@@ -192,7 +156,6 @@ $color-btn-text: #fff;
         right: 0;
         transform: none;
       }
-
       .img-frame {
         border-width: 4px;
       }
@@ -200,47 +163,44 @@ $color-btn-text: #fff;
   }
 }
 
-// 991px - 768px
 @media (max-width: 991px) and (min-width: 768px) {
-  .beauty-section {
-    padding: 40px 30px;
-
-    .content {
-      .title {
-        font-size: 28px;
-      }
-      .desc {
-        font-size: 13px;
-      }
+  .content {
+    flex: 1;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+  }
+  .image-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .img-frame {
+      display: none;
     }
-
-    .image-wrapper {
-      .img-frame,
-      .image {
-        width: 240px;
-        height: 240px;
-      }
-      .img-frame {
-        border-width: 3px;
-      }
+    .image {
+      position:sticky;
+      width: 380px;
+      height: 380px;
+      background-color: $gray-text;
+      top: 50%;
+      right: 0;
+      transform: translateY(-50%);
+      z-index: 2;
+      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
     }
   }
 }
 
-// 767px - 305px
 @media (max-width: 767px) and (min-width: 305px) {
   .beauty-section {
     flex-direction: column;
     padding: 30px 20px;
-
     .content {
       max-width: 100%;
       text-align: center;
-
       .subtitle {
         font-size: 12px;
       }
-
       .title {
         font-size: 22px;
       }
@@ -248,17 +208,19 @@ $color-btn-text: #fff;
         font-size: 12px;
       }
     }
-
     .image-wrapper {
       width: 100%;
       height: auto;
       margin-top: 30px;
-
-      .img-frame,
+      .img-frame {
+        display: none;
+      }
       .image {
         width: 180px;
         height: 180px;
         position: relative;
+        top: 80px;
+        right: 60px;
         border-width: 2px;
       }
     }

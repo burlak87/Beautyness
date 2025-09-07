@@ -1,12 +1,12 @@
 <script setup>
-import Header from '../components/header.vue';
-import WelcomeBanner from '../components/welcomeBanner.vue';
-import OtherFeatures from '../components/otherFeatures.vue';
-import AboutInfo from '../components/aboutInfo.vue';
-import LatestStories from '../components/latestStories.vue';
-import Testimonials from '../components/testimonials.vue';
-import Follow from '../components/follow.vue';
-import Footer from '../components/footer.vue';
+import Header from '@/components/header.vue';
+import WelcomeBanner from '@/components/welcomeBanner.vue';
+import OtherFeatures from '@/components/otherFeatures.vue';
+import AboutInfo from '@/components/aboutInfo.vue';
+import LatestStories from '@/components/latestStories.vue';
+import Testimonials from '@/components/testimonials.vue';
+import Follow from '@/components/follow.vue';
+import Footer from '@/components/footer.vue';
 
 const myDataObject = {
   titleClass: "title",

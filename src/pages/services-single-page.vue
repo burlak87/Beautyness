@@ -1,11 +1,11 @@
 <script setup>
-  import Header from './components/header.vue';
-  import WelcomeBanner from './components/welcomeBanner.vue';
+  import Header from '@/components/header.vue';
+  import WelcomeBanner from '@/components/welcomeBanner.vue';
   import AboutInfoService from '@/components/aboutInfoService.vue';
   import MembershipCard from '@/components/membershipCard.vue';
   import Appointment from '@/components/appointment.vue';
-  import Benefits from './components/benefits.vue';
-  import Footer from './components/footer.vue';
+  import Benefits from '@/components/benefits.vue';
+  import Footer from '@/components/footer.vue';
 </script>
 
 <template>

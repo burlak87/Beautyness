@@ -4,7 +4,7 @@
 
 .aboutInfo {
   width: 60vw;
-  height: 48vh;
+  height: 64vh;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -12,6 +12,7 @@
   background-color: $dark-green;
   margin: 5vh 0;
   .aboutContent {
+    height: fit-content;
     display: flex;
     flex-direction: column;
     justify-content: start;
@@ -31,6 +32,32 @@
       font-weight: 400;
       font-size: 18px;
       color: $white-text;
+    }
+  }
+}
+
+@media (max-width: 1300px) and (min-width: 992px) {
+  .aboutInfo {
+    height: fit-content;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 991px) and (min-width: 768px) {
+  .aboutInfo {
+    width: 100vw;
+    height: fit-content;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 767px) and (min-width: 305px) {
+  .aboutInfo {
+    width: 100vw;
+    height: fit-content;
+    flex-direction: column;
+    img {
+      width: 96vw;
     }
   }
 }

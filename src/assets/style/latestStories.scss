@@ -31,14 +31,15 @@
 
   .articleActive {
     width: 70vw;
+    height: fit-content;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     gap: 40px;
     .articleBlock {
-      width: 18.6vw;
-      height: 48.6vh;
+      width: fit-content;
+      height: fit-content;
       background-color: $light-bg;
       display: flex;
       flex-direction: column;
@@ -68,13 +69,14 @@
 
   .expertActive {
     width: 70vw;
+    height: fit-content;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     gap: 40px;
     .expertBlock {
-      width: 20vw;
+      width: fit-content;
       height: 60vh;
       background-color: inherit;
       display: flex;
@@ -122,8 +124,140 @@
   }
 }
 
-@media (max-width: 1200px) and (min-width: 992px) {}
+@media (max-width: 1200px) and (min-width: 992px) {
+  .latestStories {
+    .title {
+      span {
+        text-align: center;
+      }
+      h3 {
+        text-align: center;
+      }
+    }
 
-@media (max-width: 991px) and (min-width: 768px) {}
+    .articleActive {
+      flex-direction: column;
+      .articleBlock {
+        width: 60vw;
+        height: fit-content;
+        align-items: center;
+        p {
+          text-align: center;
+        }
+      }
+    }
 
-@media (max-width: 767px) and (min-width: 305px) {}
+    .expertActive {
+      flex-direction: column;
+      .expertBlock {
+        width: 60vw;
+        height: fit-content;
+        align-items: center;
+      }
+    }
+
+    .btn-active {
+      width: 250px;
+      height: 65px;
+      background-color: inherit;
+      border: $bd;
+    }
+
+    .none {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 991px) and (min-width: 768px) {
+  .latestStories {
+    .title {
+      span {
+        text-align: center;
+      }
+      h3 {
+        text-align: center;
+      }
+    }
+    
+    .articleActive {
+      flex-direction: column;
+      .articleBlock {
+        width: 60vw;
+        height: fit-content;
+        align-items: center;
+        span {
+          text-align: center;
+        }
+        h3 {
+          text-align: center;
+        }
+        p {
+          font-weight: 400;
+          font-size: 16px;
+          color: $gray-text;
+          padding: .2vw;
+          text-align: center;
+        }
+      }
+    }
+
+    .expertActive {
+      flex-direction: column;
+      .expertBlock {
+        width: 60vw;
+        height: fit-content;
+        align-items: center;
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) and (min-width: 305px) {
+  .latestStories {
+    .title {
+      span {
+        text-align: center;
+      }
+      h3 {
+        text-align: center;
+      }
+    }
+    
+    .articleActive {
+      background-color: $light-bg;
+      flex-direction: column;
+      width: 100vw;
+      .articleBlock {
+        width: 80%;
+        height: fit-content;
+        align-items: center;
+        span {
+          text-align: center;
+        }
+        h3 {
+          text-align: center;
+        }
+        p {
+          font-weight: 400;
+          font-size: 16px;
+          color: $gray-text;
+          padding: .2vw;
+          text-align: center;
+        }
+      }
+    }
+
+    .expertActive {
+      flex-direction: column;
+      .expertBlock {
+        width: 60vw;
+        height: fit-content;
+        align-items: center;
+        img {
+          width: 96vw;
+        }
+      }
+    }
+  }
+}

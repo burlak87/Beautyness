@@ -1,10 +1,8 @@
 <script setup>
   import Header from '@/components/header.vue';
   import WelcomeBanner from '@/components/welcomeBanner.vue';
-
   import Services from '@/components/services.vue';
   import Callout from '@/components/callout.vue';
-
   import Footer from '@/components/footer.vue';
 
   const dataServiceObject = [

@@ -75,8 +75,22 @@
   }
 }
 
-@media (max-width: 1200px) and (min-width: 992px) {}
-
-@media (max-width: 991px) and (min-width: 768px) {}
-
-@media (max-width: 767px) and (min-width: 305px) {}
+@media (max-width: 767px) and (min-width: 305px) {
+  .form {
+    width: 100vw;
+    height: fit-content;
+    background-color: $light-bg;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    h4 {
+      text-align: center;
+    }
+    .inputs-form {
+      width: 90vw;
+      height: fit-content;
+    }
+  }
+}

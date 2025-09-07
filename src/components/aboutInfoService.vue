@@ -37,7 +37,7 @@
         </ul>
       </article>
 
-      <img src="../assets/image/Image(25).png" alt="">
+      <img class="video" src="../assets/image/Image(25).png" alt="">
     </section>
   </article>
 </template>

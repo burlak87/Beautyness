@@ -1,8 +1,8 @@
 <script setup>
-import Header from './components/header.vue';
-import WelcomeBanner from './components/welcomeBanner.vue';
-import WorkerContactLocation from '../components/worker-contact-location.vue';
-import Footer from './components/footer.vue';
+import Header from '@/components/header.vue';
+import WelcomeBanner from '@/components/welcomeBanner.vue';
+import WorkerContactLocation from '@/components/worker-contact-location.vue';
+import Footer from '@/components/footer.vue';
 
 const myDataObject = {
   span: "GET IN TOUCH!",
