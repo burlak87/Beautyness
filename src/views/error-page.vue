@@ -23,7 +23,7 @@ import Footer from '@/components/footer.vue';
 </template>
 
 <style scoped lang="scss">
-  @import "./assets/var";
+  @import "../assets/var";
 
   .errorBanner {
     height: 100vh;
