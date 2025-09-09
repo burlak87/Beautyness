@@ -1,29 +1,41 @@
-# .
+# Описание
+Данный проект представляет собой небольшой сайт состоящий только из Frontend'a, использующего VueJS, SCSS.
 
-This template should help get you started developing with Vue 3 in Vite.
-
-## Recommended IDE Setup
-
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vite.dev/config/).
-
-## Project Setup
-
+## Установка и запуск
+Перед запуском установите зависимости:
 ```sh
 npm install
 ```
 
-### Compile and Hot-Reload for Development
+Для сборки приложения:
+```sh
+npm build
+```
 
+Для запуска Frontend'а:
 ```sh
 npm run dev
 ```
 
-### Compile and Minify for Production
+## Страницы
+На данном проекте есть множество страниц. С ними можно ознакомится в **@/src/views**, а также вот их полный список:
+- Home-Page
+- About-Page
+- Contact-Page
+- Services-Page
+- Services-Single-Page
+- Team-Page
+- Team-Single-Page
+- Blog-Page
+- Location-Page
+- Error-Page
 
-```sh
-npm run build
-```
+## Адаптив Страниц
+Сайт сделан деномически и координально меняется лишь в точках, а именно 1200px+, 1199px-992px, 991px-768px, 767px-320px.
+
+## Функциональность
+
+## Технологии
+- VueJS
+- SCSS
+- Также использовалась библиотек для иконок Font-Awesome
